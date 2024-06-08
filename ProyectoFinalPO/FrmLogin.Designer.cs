@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             txtInicioSesion = new Label();
             txbUsuario = new TextBox();
             txbContaseña = new TextBox();
@@ -36,16 +37,22 @@
             lblContraseña = new Label();
             lblBienvenida = new Label();
             btnCancelarLogin = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // txtInicioSesion
             // 
             txtInicioSesion.AutoSize = true;
-            txtInicioSesion.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            txtInicioSesion.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtInicioSesion.ForeColor = Color.FromArgb(34, 45, 50);
             txtInicioSesion.Location = new Point(287, 60);
             txtInicioSesion.Name = "txtInicioSesion";
-            txtInicioSesion.Size = new Size(275, 41);
+            txtInicioSesion.Size = new Size(267, 41);
             txtInicioSesion.TabIndex = 0;
             txtInicioSesion.Text = "INICIO DE SESIÓN";
             // 
@@ -76,7 +83,7 @@
             btnInicioSesion.ForeColor = Color.White;
             btnInicioSesion.Location = new Point(242, 293);
             btnInicioSesion.Name = "btnInicioSesion";
-            btnInicioSesion.Size = new Size(130, 35);
+            btnInicioSesion.Size = new Size(130, 41);
             btnInicioSesion.TabIndex = 3;
             btnInicioSesion.Text = "Ingresar";
             btnInicioSesion.UseVisualStyleBackColor = false;
@@ -107,11 +114,11 @@
             // lblBienvenida
             // 
             lblBienvenida.AutoSize = true;
-            lblBienvenida.Font = new Font("Segoe UI", 14F);
+            lblBienvenida.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBienvenida.ForeColor = Color.FromArgb(34, 45, 50);
-            lblBienvenida.Location = new Point(287, 20);
+            lblBienvenida.Location = new Point(224, 9);
             lblBienvenida.Name = "lblBienvenida";
-            lblBienvenida.Size = new Size(261, 32);
+            lblBienvenida.Size = new Size(389, 46);
             lblBienvenida.TabIndex = 0;
             lblBienvenida.Text = "Bienvenido a MasterPC";
             // 
@@ -124,11 +131,41 @@
             btnCancelarLogin.ForeColor = Color.White;
             btnCancelarLogin.Location = new Point(418, 293);
             btnCancelarLogin.Name = "btnCancelarLogin";
-            btnCancelarLogin.Size = new Size(130, 35);
+            btnCancelarLogin.Size = new Size(130, 41);
             btnCancelarLogin.TabIndex = 6;
             btnCancelarLogin.Text = "Cancelar";
             btnCancelarLogin.UseVisualStyleBackColor = false;
             btnCancelarLogin.Click += btnCancelarLogin_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.candado;
+            pictureBox1.Location = new Point(224, 214);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(39, 34);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(227, 140);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(36, 34);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.masterPC2;
+            pictureBox3.Location = new Point(0, -4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(206, 153);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
             // 
             // FrmLogin
             // 
@@ -136,6 +173,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 240, 240);
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(btnCancelarLogin);
             Controls.Add(lblContraseña);
             Controls.Add(lblUsuario);
@@ -144,8 +184,13 @@
             Controls.Add(txbUsuario);
             Controls.Add(txtInicioSesion);
             Controls.Add(lblBienvenida);
+            MaximizeBox = false;
             Name = "FrmLogin";
             Text = "FrmLogin";
+            Load += FrmLogin_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,5 +205,8 @@
         private Label lblUsuario;
         private Label lblContraseña;
         private Button btnCancelarLogin;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

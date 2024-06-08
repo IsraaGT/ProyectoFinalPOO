@@ -12,6 +12,8 @@ namespace ProyectoFinalPO
         public FrmEmpleado()
         {
             InitializeComponent();
+            this.Icon = new Icon(@"imagenes\iconoEmpleado.ico");
+
             CargarReportes();
         }
 
@@ -21,7 +23,7 @@ namespace ProyectoFinalPO
 
             try
             {
-                using (StreamReader sr = new StreamReader(@"C:\Users\Isra\Documents\ProyectoPO\reportes.txt"))
+                using (StreamReader sr = new StreamReader("reportes.txt"))
                 {
                     string linea;
                     while ((linea = sr.ReadLine()) != null)
@@ -80,7 +82,7 @@ namespace ProyectoFinalPO
 
                 try
                 {
-                    using (StreamWriter sw = new StreamWriter(@"C:\Users\Isra\Documents\ProyectoPO\reportes.txt", false))
+                    using (StreamWriter sw = new StreamWriter("reportes.txt", false))
                     {
                         foreach (var reporte in reportes)
                         {
@@ -109,7 +111,19 @@ namespace ProyectoFinalPO
                 txtErrores.Text = selectedItem.SubItems[1].Text;
             }
         }
+
+        private void FrmEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+        }
     }
 
-   
+
 }

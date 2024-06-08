@@ -34,11 +34,15 @@
             chkError14 = new CheckBox();
             btnCerrarSesionC = new Button();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnEnviarReporte
             // 
-            btnEnviarReporte.Location = new Point(600, 350);
+            btnEnviarReporte.Location = new Point(330, 330);
             btnEnviarReporte.Name = "btnEnviarReporte";
             btnEnviarReporte.Size = new Size(120, 30);
             btnEnviarReporte.TabIndex = 0;
@@ -188,7 +192,7 @@
             // 
             // btnCerrarSesionC
             // 
-            btnCerrarSesionC.Location = new Point(600, 284);
+            btnCerrarSesionC.Location = new Point(460, 330);
             btnCerrarSesionC.Name = "btnCerrarSesionC";
             btnCerrarSesionC.Size = new Size(120, 30);
             btnCerrarSesionC.TabIndex = 15;
@@ -206,11 +210,33 @@
             label1.TabIndex = 16;
             label1.Text = "Marque los errores que presenta en su PC.";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.enviar;
+            pictureBox1.Location = new Point(294, 330);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(30, 29);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.soporte;
+            pictureBox2.Location = new Point(451, 204);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(129, 95);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 18;
+            pictureBox2.TabStop = false;
+            // 
             // FrmCliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 400);
+            ClientSize = new Size(600, 400);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(btnCerrarSesionC);
             Controls.Add(chkError14);
@@ -228,30 +254,36 @@
             Controls.Add(chkError2);
             Controls.Add(chkError1);
             Controls.Add(btnEnviarReporte);
+            MaximizeBox = false;
             Name = "FrmCliente";
             Text = "FrmCliente";
+            Load += FrmCliente_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnEnviarReporte;
-        private System.Windows.Forms.CheckBox chkError1;
-        private System.Windows.Forms.CheckBox chkError2;
-        private System.Windows.Forms.CheckBox chkError3;
-        private System.Windows.Forms.CheckBox chkError4;
-        private System.Windows.Forms.CheckBox chkError5;
-        private System.Windows.Forms.CheckBox chkError6;
-        private System.Windows.Forms.CheckBox chkError7;
-        private System.Windows.Forms.CheckBox chkError8;
-        private System.Windows.Forms.CheckBox chkError9;
-        private System.Windows.Forms.CheckBox chkError10;
-        private System.Windows.Forms.CheckBox chkError11;
-        private System.Windows.Forms.CheckBox chkError12;
-        private System.Windows.Forms.CheckBox chkError13;
-        private System.Windows.Forms.CheckBox chkError14;
+        private Button btnEnviarReporte;
+        private CheckBox chkError1;
+        private CheckBox chkError2;
+        private CheckBox chkError3;
+        private CheckBox chkError4;
+        private CheckBox chkError5;
+        private CheckBox chkError6;
+        private CheckBox chkError7;
+        private CheckBox chkError8;
+        private CheckBox chkError9;
+        private CheckBox chkError10;
+        private CheckBox chkError11;
+        private CheckBox chkError12;
+        private CheckBox chkError13;
+        private CheckBox chkError14;
         private Button btnCerrarSesionC;
         private Label label1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

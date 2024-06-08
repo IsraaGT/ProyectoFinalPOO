@@ -17,111 +17,172 @@
 
         private void InitializeComponent()
         {
-            this.btnVerReportes = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.lstReportes = new System.Windows.Forms.ListView();
-            this.columnHeaderUsuario = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderErrores = new System.Windows.Forms.ColumnHeader();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtErrores = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btnVerReportes = new Button();
+            btnModificar = new Button();
+            lstReportes = new ListView();
+            columnHeaderUsuario = new ColumnHeader();
+            columnHeaderErrores = new ColumnHeader();
+            txtUsuario = new TextBox();
+            txtErrores = new TextBox();
+            btnGuardar = new Button();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            btnCerrarSesion = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // btnVerReportes
             // 
-            this.btnVerReportes.Location = new System.Drawing.Point(34, 25);
-            this.btnVerReportes.Name = "btnVerReportes";
-            this.btnVerReportes.Size = new System.Drawing.Size(173, 75);
-            this.btnVerReportes.TabIndex = 0;
-            this.btnVerReportes.Text = "Ver Reportes";
-            this.btnVerReportes.UseVisualStyleBackColor = true;
-            this.btnVerReportes.Click += new System.EventHandler(this.btnVerReportes_Click);
+            btnVerReportes.Font = new Font("Yu Gothic UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVerReportes.Location = new Point(50, 50);
+            btnVerReportes.Name = "btnVerReportes";
+            btnVerReportes.Size = new Size(150, 50);
+            btnVerReportes.TabIndex = 0;
+            btnVerReportes.Text = "Ver Reportes";
+            btnVerReportes.UseVisualStyleBackColor = true;
+            btnVerReportes.Click += btnVerReportes_Click;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(314, 25);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(173, 75);
-            this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            btnModificar.Font = new Font("Yu Gothic UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnModificar.Location = new Point(250, 50);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(150, 50);
+            btnModificar.TabIndex = 1;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
             // 
             // lstReportes
             // 
-            this.lstReportes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderUsuario,
-            this.columnHeaderErrores});
-            this.lstReportes.FullRowSelect = true;
-            this.lstReportes.GridLines = true;
-            this.lstReportes.Location = new System.Drawing.Point(12, 120);
-            this.lstReportes.Name = "lstReportes";
-            this.lstReportes.Size = new System.Drawing.Size(600, 200);
-            this.lstReportes.TabIndex = 2;
-            this.lstReportes.UseCompatibleStateImageBehavior = false;
-            this.lstReportes.View = System.Windows.Forms.View.Details;
-            this.lstReportes.SelectedIndexChanged += new System.EventHandler(this.lstReportes_SelectedIndexChanged);
+            lstReportes.Columns.AddRange(new ColumnHeader[] { columnHeaderUsuario, columnHeaderErrores });
+            lstReportes.FullRowSelect = true;
+            lstReportes.GridLines = true;
+            lstReportes.Location = new Point(12, 120);
+            lstReportes.Name = "lstReportes";
+            lstReportes.Size = new Size(544, 241);
+            lstReportes.TabIndex = 2;
+            lstReportes.UseCompatibleStateImageBehavior = false;
+            lstReportes.View = View.Details;
+            lstReportes.SelectedIndexChanged += lstReportes_SelectedIndexChanged;
             // 
             // columnHeaderUsuario
             // 
-            this.columnHeaderUsuario.Text = "Usuario";
-            this.columnHeaderUsuario.Width = 150;
+            columnHeaderUsuario.Text = "Usuario";
+            columnHeaderUsuario.Width = 150;
             // 
             // columnHeaderErrores
             // 
-            this.columnHeaderErrores.Text = "Errores";
-            this.columnHeaderErrores.Width = 450;
+            columnHeaderErrores.Text = "Errores";
+            columnHeaderErrores.Width = 350;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(650, 120);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(150, 27);
-            this.txtUsuario.TabIndex = 3;
+            txtUsuario.Location = new Point(600, 120);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(150, 34);
+            txtUsuario.TabIndex = 3;
             // 
             // txtErrores
             // 
-            this.txtErrores.Location = new System.Drawing.Point(650, 170);
-            this.txtErrores.Name = "txtErrores";
-            this.txtErrores.Size = new System.Drawing.Size(150, 27);
-            this.txtErrores.TabIndex = 4;
+            txtErrores.Location = new Point(600, 170);
+            txtErrores.Name = "txtErrores";
+            txtErrores.Size = new Size(150, 34);
+            txtErrores.TabIndex = 4;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(650, 220);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(150, 29);
-            this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            btnGuardar.Font = new Font("Yu Gothic UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.Location = new Point(600, 220);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(150, 30);
+            btnGuardar.TabIndex = 5;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Yu Gothic UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(50, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(260, 31);
+            label1.TabIndex = 6;
+            label1.Text = "Gestión de los Reportes";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.save;
+            pictureBox1.Location = new Point(562, 220);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.see;
+            pictureBox2.Location = new Point(12, 59);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(32, 32);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
+            // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.Font = new Font("Yu Gothic UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCerrarSesion.Location = new Point(600, 272);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(150, 30);
+            btnCerrarSesion.TabIndex = 9;
+            btnCerrarSesion.Text = "Cerrar Sesión";
+            btnCerrarSesion.UseVisualStyleBackColor = true;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // FrmEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 361);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtErrores);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.lstReportes);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnVerReportes);
-            this.Name = "FrmEmpleado";
-            this.Text = "FrmEmpleado";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 400);
+            Controls.Add(btnCerrarSesion);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(label1);
+            Controls.Add(btnGuardar);
+            Controls.Add(txtErrores);
+            Controls.Add(txtUsuario);
+            Controls.Add(lstReportes);
+            Controls.Add(btnModificar);
+            Controls.Add(btnVerReportes);
+            Font = new Font("Yu Gothic UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MaximizeBox = false;
+            Name = "FrmEmpleado";
+            Text = "FrmEmpleado";
+            Load += FrmEmpleado_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnVerReportes;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.ListView lstReportes;
-        private System.Windows.Forms.ColumnHeader columnHeaderUsuario;
-        private System.Windows.Forms.ColumnHeader columnHeaderErrores;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtErrores;
-        private System.Windows.Forms.Button btnGuardar;
+        private Button btnVerReportes;
+        private Button btnModificar;
+        private ListView lstReportes;
+        private ColumnHeader columnHeaderUsuario;
+        private ColumnHeader columnHeaderErrores;
+        private TextBox txtUsuario;
+        private TextBox txtErrores;
+        private Button btnGuardar;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private Button btnCerrarSesion;
     }
 }

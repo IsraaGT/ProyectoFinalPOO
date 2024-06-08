@@ -12,6 +12,7 @@ namespace ProyectoFinalPO
         public FrmAdmin(GestionUsuarios gestion)
         {
             InitializeComponent();
+            this.Icon = new Icon(@"imagenes\iconoAdmin.ico");
             gestionUsuarios = gestion;
             usuarios = gestionUsuarios.CargarUsuarios();
         }
@@ -85,6 +86,18 @@ namespace ProyectoFinalPO
         private void lstUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
         }
     }
 }

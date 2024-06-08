@@ -12,7 +12,8 @@ namespace ProyectoFinalPO
         public FrmLogin()
         {
             InitializeComponent();
-            gestionUsuarios = new GestionUsuarios(@"C:\Users\Isra\Documents\ProyectoPO\usuarios.txt");
+            this.Icon = new Icon(@"imagenes\iconoLogin.ico");
+            gestionUsuarios = new GestionUsuarios("usuarios.txt");
             usuarios = gestionUsuarios.CargarUsuarios();
         }
 
@@ -27,23 +28,26 @@ namespace ProyectoFinalPO
             Usuario usuario = VerificarUsuario(txbUsuario.Text, txbContaseña.Text);
             if (usuario != null)
             {
-                if (usuario.TipoUsuario == "Empleado")
+                switch (usuario.TipoUsuario)
                 {
-                    FrmEmpleado frmEmpleado = new FrmEmpleado();
-                    this.Hide();
-                    frmEmpleado.Show();
-                }
-                else if (usuario.TipoUsuario == "Cliente")
-                {
-                    FrmCliente frmCliente = new FrmCliente(usuario.NombreUsuario); // Pasa el nombre de usuario
-                    this.Hide();
-                    frmCliente.Show();
-                }
-                else if (usuario.TipoUsuario == "Admin")
-                {
-                    FrmAdmin frmAdmin = new FrmAdmin(gestionUsuarios); // Aquí pasas la instancia de GestionUsuarios
-                    this.Hide();
-                    frmAdmin.Show();
+                    case "Empleado":
+                        FrmEmpleado frmEmpleado = new FrmEmpleado();
+                        this.Hide();
+                        frmEmpleado.Show();
+                        break;
+                    case "Cliente":
+                        FrmCliente frmCliente = new FrmCliente(usuario.NombreUsuario);
+                        this.Hide();
+                        frmCliente.Show();
+                        break;
+                    case "Admin":
+                        FrmAdmin frmAdmin = new FrmAdmin(gestionUsuarios);
+                        this.Hide();
+                        frmAdmin.Show();
+                        break;
+                    default:
+                        MessageBox.Show("Tipo de usuario no reconocido.");
+                        break;
                 }
             }
             else
@@ -51,6 +55,7 @@ namespace ProyectoFinalPO
                 MessageBox.Show("Usuario o contraseña incorrectos.");
             }
         }
+
 
         private Usuario VerificarUsuario(string nombreUsuario, string contraseña)
         {
@@ -62,6 +67,11 @@ namespace ProyectoFinalPO
                 }
             }
             return null;
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

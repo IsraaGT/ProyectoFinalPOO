@@ -8,12 +8,15 @@ namespace ProyectoFinalPO
 {
     public partial class FrmCliente : Form
     {
+
         private string nombreUsuario;
         private CheckBox[] checkBoxes;
 
         public FrmCliente(string usuario)
         {
             InitializeComponent();
+            this.Icon = new Icon(@"imagenes\iconoCliente.ico");
+
             nombreUsuario = usuario;
 
             checkBoxes = new CheckBox[]
@@ -46,7 +49,7 @@ namespace ProyectoFinalPO
 
             try
             {
-                using (StreamWriter sw = new StreamWriter(@"C:\Users\Isra\Documents\ProyectoPO\reportes.txt", true, Encoding.UTF8))
+                using (StreamWriter sw = new StreamWriter(@"reportes.txt", true, Encoding.UTF8))
                 {
                     sw.WriteLine(reporte);
                 }
@@ -60,9 +63,14 @@ namespace ProyectoFinalPO
 
         private void btnCerrarSesionC_Click(object sender, EventArgs e)
         {
-            this.Hide(); 
-            FrmLogin frmLogin = new FrmLogin(); 
-            frmLogin.Show(); 
+            this.Hide();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

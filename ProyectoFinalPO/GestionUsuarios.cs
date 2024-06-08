@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;  
 
 public class GestionUsuarios
 {
@@ -35,7 +36,7 @@ public class GestionUsuarios
         }
         catch (Exception ex)
         {
-            MessageBox.Show("Error al leer el archivo de usuarios: ");
+            MessageBox.Show($"Error al leer el archivo de usuarios: {ex.Message}");
         }
 
         return usuarios;
@@ -55,6 +56,7 @@ public class GestionUsuarios
         }
         catch (Exception ex)
         {
+            MessageBox.Show($"Error al guardar el archivo de usuarios: {ex.Message}");
         }
     }
 }
